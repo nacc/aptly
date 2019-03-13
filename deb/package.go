@@ -276,6 +276,9 @@ func (p *Package) GetField(name string) string {
 		if p.IsUdeb {
 			return PackageTypeUdeb
 		}
+		if p.IsInstaller {
+			return PackageTypeInstaller
+		}
 		return PackageTypeBinary
 	case "Name":
 		return p.Name
